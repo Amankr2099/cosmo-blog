@@ -6,10 +6,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server: {
     proxy: {
-      '/api':'https://cosmo-blog-backend.onrender.com/'
+      '/api':'https://cosmo-blog-backend.onrender.com'
     },
   },
   plugins: [react()],
-  build: { chunkSizeWarningLimit: 1600, }
+  
   
 })
