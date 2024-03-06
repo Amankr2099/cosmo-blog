@@ -43,31 +43,3 @@ export const Cards = [
     },
     
   ];
-  // {
-  //   title: "Blog7 Title",
-  //   content: "AllPost Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus officia iure quia quam reprehenderit. Necessitatibus odio provident magni ex. Hic nobis veniam sed facere!",
-  //   blogImage: "https://via.placeholder.com/600x300?text=Image+7",
-  //   author: "Author 4",
-  //   caption:"This is somethng.."
-  // },
-  // {
-  //   title: "Blog8 Title",
-  //   content: "AllPost Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus officia iure quia quam reprehenderit. Necessitatibus odio provident magni ex. Hic nobis veniam sed facere!",
-  //   blogImage: "https://via.placeholder.com/600x300?text=Image+8",
-  //   author: "Author 5",
-  //   caption:"This is somethng.."
-  // },
-  // {
-  //   title: "Build9 Title",
-  //   content: "AllPost Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus officia iure quia quam reprehenderit. Necessitatibus odio provident magni ex. Hic nobis veniam sed facere!",
-  //   blogImage: "https://via.placeholder.com/600x300?text=Image+9",
-  //   author: "Author 5",
-  //   caption:"This is somethng.."
-  // },
-  // {
-  //   title: "Blog10 Title",
-  //   content: "AllPost Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus officia iure quia quam reprehenderit. Necessitatibus odio provident magni ex. Hic nobis veniam sed facere!",
-  //   blogImage: "https://via.placeholder.com/600x300?text=Image+10",
-  //   author: "Author 6",
-  //   caption:"This is somethng.."
-  // }
