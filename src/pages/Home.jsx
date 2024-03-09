@@ -21,7 +21,7 @@ export const Home = () => {
         alert(
           "Unable to get blogs"
         );
-      }
+      } 
     }
   }; 
 
