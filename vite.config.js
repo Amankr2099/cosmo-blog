@@ -13,6 +13,7 @@ export default defineConfig({
     react(),
     chunkSplitPlugin()
   ],
+  build: { chunkSizeWarningLimit: 1600, }
   
   
 })
