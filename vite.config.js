@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
+// import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
@@ -20,10 +20,12 @@ export default defineConfig({
       '/api':'https://cosmo-blog-backend.onrender.com'
     },
   },
-  plugins: [
-    react(),
-    chunkSplitPlugin()
-  ],
+  plugins: [react()],
+  // plugins: [
+  //   react(),
+  //   chunkSplitPlugin()
+  // ],
+  
   
 })
 
