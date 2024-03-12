@@ -21,7 +21,7 @@ export const App = () => {
     createRoutesFromElements(
       <Route path='/' element={<Layout/>}>
         <Route path='' element={<Home/>} />
-        <Route path='/about' element={<AboutSection/>} />
+        <Route path='/about' element={<AboutSection/>}  />
         <Route path='/contact' element={<ContactSection/>} />
         <Route path='/posts' element={<PostsSection/>} />
         <Route path="/post/:id" element={<SinglePost />} />

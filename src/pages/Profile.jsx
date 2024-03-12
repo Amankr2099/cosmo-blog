@@ -162,7 +162,7 @@ export const Profile = () => {
                   {editOption ? "Cancel" : "Edit Profile"}
                 </button>
 
-                <Link to="/write-post">
+                <Link to="/write-post"  onClick={()=>{window.scrollTo(0,0)}}>
                   <button
                     type="button"
                     className="btn btn-info btn-rounded btn-md"

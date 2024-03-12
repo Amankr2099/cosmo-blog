@@ -34,7 +34,7 @@ const Carousel = ({ blogs }) => {
                 className={`carousel-item ${index === 0 ? "active" : ""}`}
                 key={index}
               >
-                <Link to={`/post/${item._id}`}>
+                <Link to={`/post/${item._id}`}  onClick={()=>{window.scrollTo(0,0)}}>
                   <img
                     src={item.blogImage ? item.blogImage : "https://via.placeholder.com/600x300?text=Image is not available"}
                     className="d-block w-100"

@@ -3,10 +3,12 @@ import { Link, Navigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import parse from "html-react-parser";
 import UserContext from "./Context/UserContext";
+import {Buffering} from "./Buffering"
 
 export const SinglePost = () => {
   const location = useLocation(); 
   const postId = location.pathname.split("/")[2];
+  const [buffering,setBuffering] = useState(false)
 
   const [post, setPost] = useState({});
   const { user } = useContext(UserContext);
@@ -34,7 +36,10 @@ export const SinglePost = () => {
   }, [postId]);
 
   return (
-    <div
+    <>
+    {
+      post ? (
+        <div
       className="container m-5 mx-auto rounded-2"
       style={{ backgroundColor: "rgba(140, 137, 137, 0.5)" }}
     >
@@ -43,7 +48,7 @@ export const SinglePost = () => {
         <p>{post.caption}</p>
       </div>
       <img
-        src={post.blogImage ? post.blogImage : "https://cdn.pixabay.com/photo/2016/07/30/19/47/banner-1557834_1280.jpg"}
+        src={post.blogImage}
         className="img-fluid rounded-4 w-100"
         alt="Fissure in Sandstone"
       />
@@ -57,7 +62,7 @@ export const SinglePost = () => {
           <i className="fa-solid fa-pen px-2" /> Author : {post.authorName}
         </p>
         {post.author == user && (
-          <Link to={`/edit-post/${postId}`} className="text-decoration-none">
+          <Link to={`/edit-post/${postId}`} className="text-decoration-none"  onClick={()=>{window.scrollTo(0,0)}}>
             <button
               type="button"
               className="btn btn-danger btn-rounded btn-md mt-3 d-block mx-auto"
@@ -68,5 +73,11 @@ export const SinglePost = () => {
         )}
       </div>
     </div>
+      ):(
+        buffering && <Buffering />
+      )
+    }
+    
+    </>
   );
 };

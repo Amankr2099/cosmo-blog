@@ -6,7 +6,7 @@ export const Card = ({ card }) => {
 
   
   return (
-    <Link to={`/post/${card._id}`} className="text-decoration-none">
+    <Link to={`/post/${card._id}`} className="text-decoration-none"  onClick={()=>{window.scrollTo(0,0)}}>
     <div className="card my-3 " style={{ maxWidth: "590px" }}>
       <div className="row g-0">
         <div className="col-md-4 ">
