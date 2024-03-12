@@ -13,7 +13,7 @@ export const Login = () => {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-        const res = await axios.post("api/user/login", {
+        const res = await axios.post(import.meta.env.VITE_BASE_URL+"/user/login", {
             username: username,
             email: email,
             password: password,

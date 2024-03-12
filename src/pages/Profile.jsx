@@ -18,7 +18,7 @@ export const Profile = () => {
 
   const getProfile = async () => {
     try {
-      const res = await axios.get(`/api/user/${user}`);
+      const res = await axios.get(`${import.meta.env.VITE_BASE_URL }/user/${user}`);
       if (res.data) {
         setProfile(res.data);
         // const {username,email,fullName,profilePic,password} = res.data;

@@ -10,7 +10,7 @@ export const Home = () => {
 
   const getBlogs = async () => {
     try {
-      const { data } = await axios.get("api/blogs/allblogs");
+      const { data } = await axios.get(import.meta.env.VITE_BASE_URL + "/blogs/allblogs");
       if (data) {
         setBlogs(data);
       }

@@ -23,10 +23,7 @@ export const SignUp = () => {
     data.append("password", password);
 
     try {
-        const res = await axios.post(
-            "api/user/register",
-            data
-        );
+        const res = await axios.post(import.meta.env.VITE_BASE_URL +"/user/register",data);
         if (res.data) {
             const {_id: userId } = res.data;
             setUser(userId);

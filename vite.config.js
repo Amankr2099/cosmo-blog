@@ -4,11 +4,11 @@ import react from '@vitejs/plugin-react'
 
 
 export default defineConfig({
-  server: {
-    proxy: {
-      '/api':'https://cosmo-blog-backend.onrender.com/'
-    },
-  },
+  // server: {
+  //   proxy: {
+  //     '/api':'https://cosmo-blog-backend.onrender.com/'
+  //   },
+  // },
   plugins: [
     react(),
     chunkSplitPlugin()

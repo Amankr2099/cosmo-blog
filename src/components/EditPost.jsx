@@ -19,7 +19,7 @@ export const EditPost = () => {
 
   const getPost = async () => {
     try {
-      const res = await axios.get(`/api/blogs/${postId}`);
+      const res = await axios.get(`${import.meta.env.VITE_BASE_URL }/blogs/${postId}`);
       if (res.data) {
         const { title, caption, content, blogImage } = res.data;
         setTitle(title);
@@ -53,7 +53,7 @@ export const EditPost = () => {
     if (content) data.content = content;
 
     try {
-      const res = await axios.put(`/api/blogs/${postId}`, data);
+      const res = await axios.put(`${import.meta.env.VITE_BASE_URL }/blogs/${postId}`, data);
 
       if (res.data) {
         window.location.replace(`/post/${postId}`);
@@ -75,7 +75,7 @@ export const EditPost = () => {
     localImage && data.append("blogImage", localImage);
 
     try {
-      const res = await axios.put(`/api/blogs/updateImage/${postId}`, data);
+      const res = await axios.put(`${import.meta.env.VITE_BASE_URL }/blogs/updateImage/${postId}`, data);
       if (res.data) {
         window.location.replace(`/post/${postId}`);
       }
@@ -92,7 +92,7 @@ export const EditPost = () => {
 
   const handleDelete = async()=>{
     try {
-      const res = await axios.delete(`/api/blogs/${postId}`)
+      const res = await axios.delete(`${import.meta.env.VITE_BASE_URL }/blogs/${postId}`)
       if (res.data) {
         window.location.replace(`/posts`);
       }

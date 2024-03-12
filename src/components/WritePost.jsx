@@ -23,7 +23,7 @@ export const WritePost = () => {
     blogImage ? data.append("blogImage", blogImage) : null;
 
     try {
-      const res = await axios.post("/api/blogs/addblog", data);
+      const res = await axios.post(import.meta.env.VITE_BASE_URL+"/blogs/addblog", data);
       const blogId = res.data._id;
 
       blogId && window.location.replace(`/post/${blogId}`);

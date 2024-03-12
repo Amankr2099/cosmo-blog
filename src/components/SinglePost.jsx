@@ -13,7 +13,7 @@ export const SinglePost = () => {
 
   const getPost = async () => {
     try {
-      const res = await axios.get(`/api/blogs/${postId}`);
+      const res = await axios.get(`${import.meta.env.VITE_BASE_URL }/blogs/${postId}`);
       if (res.data) {
         setPost(res.data);       
       }
