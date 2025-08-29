@@ -12,6 +12,7 @@ import { WritePost } from './components/WritePost.jsx'
 import { SinglePost } from './components/SinglePost.jsx'
 import UserContext from './components/Context/UserContext.jsx'
 import { EditPost } from './components/EditPost.jsx'
+import { PageNotFound } from './pages/PageNotFound.jsx'
 
 
 export const App = () => {
@@ -32,6 +33,8 @@ export const App = () => {
         <Route path='/profile' element={ user? <Profile/>: <Navigate to={'/signup'}/> } />
         <Route path='/write-post' element={user? <WritePost/>: <Navigate to={'/signup'}/>} />
         <Route path='/edit-post/:id' element={user? <EditPost/>: <Navigate to={'/signup'}/>} />
+
+        <Route path='*' element={<PageNotFound />} />
 
 
       </Route>

@@ -146,7 +146,7 @@ export const WritePost = () => {
         src={
           blogImage
             ? URL.createObjectURL(blogImage)
-            : "https://via.placeholder.com/600x300?text=An Image would be appreciable"
+            : "https://cdn.pixabay.com/photo/2016/07/30/19/47/banner-1557834_1280.jpg"
         }
         alt="img"
         className="w-lg-75 w-sm-100 img-fluid py-2 mx-auto d-block"

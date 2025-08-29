@@ -21,13 +21,14 @@ export const SignUp = () => {
     data.append("username", username);
     data.append("email", email);
     data.append("password", password);
+    // console.log(profilePic);
 
     try {
         const res = await axios.post(import.meta.env.VITE_BASE_URL +"/user/register",data);
         if (res.data) {
             const {_id: userId } = res.data;
             setUser(userId);
-            window.location.replace("/profile");
+            window.location.reload("/");
         }
     } catch (error) {
         if (error.response && error.response.data && error.response.data.error) {
@@ -51,7 +52,7 @@ export const SignUp = () => {
             <br />
             <span style={{ color: "hsl(218, 81%, 75%)" }}>
               Get updated on latest cosmic updates
-            </span>
+            </span> 
           </h1>
         </div>
 

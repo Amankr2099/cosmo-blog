@@ -4,7 +4,7 @@ import { Card } from "./Card";
 import axios from "axios";
 
 export const PostsSection = () => {
-  const [blogs, setBlogs] = useState([])
+  const [blogs, setBlogs] = useState(null)
 
     const getBlogs = async () => {
         try {
