@@ -31,7 +31,7 @@ export const Home = () => {
 
   return (
     <>
-      <Carousel blogs={blogs.slice(0,3)}/>
+      <Carousel blogs={blogs.slice(1,4)}/>
       <Prologue />
       <div
         className="container m-5 mx-auto rounded-2"

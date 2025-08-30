@@ -59,7 +59,7 @@ export const Profile = () => {
 
     // console.log(fullName,username,email,password);
     try {
-      const res = await axios.put(`api/user/${user}`, data);
+      const res = await axios.put(import.meta.env.VITE_BASE_URL + `/user/${user}`, data);
       if (res.data) {
 
         window.location.replace("/profile");
@@ -80,10 +80,9 @@ export const Profile = () => {
 
     const data = new FormData();
     data.append("profilePic", profilePic);
-    console.log(data);
     
     try {
-      const res = await axios.put(`api/user/profilePic/${user}`, data);
+      const res = await axios.put( `${import.meta.env.VITE_BASE_URL }/user/profilePic/${user}`, data);
       if (res) {
         window.location.replace("/profile");
       }
@@ -141,7 +140,7 @@ export const Profile = () => {
               </div>
               <h4 className="mb-2">{fullName ? fullName : profile.fullName}</h4>
               <p className="text-muted mb-3">@Writter </p>
-              <p className="mb-5 h5"> {Array(profile.post).length} Blog written by you </p>
+              <p className="mb-5 h5"> {profile.post?.length ?? 0} Blog(s) written by you </p>
 
               <div className="d-flex justify-content-around">
                 <button
